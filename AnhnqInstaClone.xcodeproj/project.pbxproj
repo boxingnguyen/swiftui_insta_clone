@@ -17,11 +17,14 @@
 		18047D592760AA10007254B6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D582760AA10007254B6 /* SignUpView.swift */; };
 		18047D5D2760B035007254B6 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D5C2760B035007254B6 /* SignInView.swift */; };
 		18047D5F2760B058007254B6 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D5E2760B058007254B6 /* GradientBackground.swift */; };
-		18047D612760B4D8007254B6 /* BottomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D602760B4D8007254B6 /* BottomButtonStyle.swift */; };
 		18047D632760B6F9007254B6 /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D622760B6F9007254B6 /* CommonTextField.swift */; };
-		18A2173E276364010094FC7D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2173D276364010094FC7D /* ColorExtension.swift */; };
-		18FA8D702766FDC500C20F91 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA8D6F2766FDC500C20F91 /* ViewExtension.swift */; };
-		18FA8D752767052C00C20F91 /* CommonTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA8D742767052C00C20F91 /* CommonTextFieldStyle.swift */; };
+		1866345E2769CE8100C1B515 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866345D2769CE8100C1B515 /* testView.swift */; };
+		18C5D2A4276837E700C0EA6B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5D2A3276837E700C0EA6B /* SignInViewModel.swift */; };
+		18C5D2A627683E1000C0EA6B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5D2A527683E1000C0EA6B /* SignUpViewModel.swift */; };
+		18C5D2A827687B8C00C0EA6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5D2A727687B8C00C0EA6B /* Constants.swift */; };
+		18FA8D702766FDC500C20F91 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA8D6F2766FDC500C20F91 /* Extensions.swift */; };
+		18FA8D752767052C00C20F91 /* CommonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA8D742767052C00C20F91 /* CommonStyle.swift */; };
+		18FA8D7A27673E5D00C20F91 /* ImgAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA8D7927673E5D00C20F91 /* ImgAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +58,14 @@
 		18047D582760AA10007254B6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		18047D5C2760B035007254B6 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		18047D5E2760B058007254B6 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
-		18047D602760B4D8007254B6 /* BottomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtonStyle.swift; sourceTree = "<group>"; };
 		18047D622760B6F9007254B6 /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
-		18A2173D276364010094FC7D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		18FA8D6F2766FDC500C20F91 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		18FA8D742767052C00C20F91 /* CommonTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextFieldStyle.swift; sourceTree = "<group>"; };
+		1866345D2769CE8100C1B515 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
+		18C5D2A3276837E700C0EA6B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		18C5D2A527683E1000C0EA6B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		18C5D2A727687B8C00C0EA6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18FA8D6F2766FDC500C20F91 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		18FA8D742767052C00C20F91 /* CommonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStyle.swift; sourceTree = "<group>"; };
+		18FA8D7927673E5D00C20F91 /* ImgAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +116,10 @@
 		18047D2327609E21007254B6 /* AnhnqInstaClone */ = {
 			isa = PBXGroup;
 			children = (
-				18047D552760A9DD007254B6 /* Views */,
 				18047D2427609E21007254B6 /* AnhnqInstaCloneApp.swift */,
+				18047D552760A9DD007254B6 /* Views */,
+				18FA8D76276739E100C20F91 /* Models */,
+				18C5D2A22768377D00C0EA6B /* ViewModels */,
 				18047D2627609E21007254B6 /* ContentView.swift */,
 				18047D502760A69B007254B6 /* Helpers */,
 				18047D2827609E23007254B6 /* Assets.xcassets */,
@@ -148,9 +156,11 @@
 		18047D502760A69B007254B6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				18FA8D6F2766FDC500C20F91 /* Extensions.swift */,
+				18FA8D742767052C00C20F91 /* CommonStyle.swift */,
 				18FA8D712767019400C20F91 /* CommonViews */,
-				18FA8D732767023F00C20F91 /* CommonStyle */,
-				18FA8D722767022B00C20F91 /* Extension */,
+				18FA8D7927673E5D00C20F91 /* ImgAssets.swift */,
+				18C5D2A727687B8C00C0EA6B /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -160,8 +170,18 @@
 			children = (
 				18047D582760AA10007254B6 /* SignUpView.swift */,
 				18047D5C2760B035007254B6 /* SignInView.swift */,
+				1866345D2769CE8100C1B515 /* testView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		18C5D2A22768377D00C0EA6B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				18C5D2A3276837E700C0EA6B /* SignInViewModel.swift */,
+				18C5D2A527683E1000C0EA6B /* SignUpViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		18FA8D712767019400C20F91 /* CommonViews */ = {
@@ -173,22 +193,11 @@
 			path = CommonViews;
 			sourceTree = "<group>";
 		};
-		18FA8D722767022B00C20F91 /* Extension */ = {
+		18FA8D76276739E100C20F91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				18FA8D6F2766FDC500C20F91 /* ViewExtension.swift */,
-				18A2173D276364010094FC7D /* ColorExtension.swift */,
 			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		18FA8D732767023F00C20F91 /* CommonStyle */ = {
-			isa = PBXGroup;
-			children = (
-				18FA8D742767052C00C20F91 /* CommonTextFieldStyle.swift */,
-				18047D602760B4D8007254B6 /* BottomButtonStyle.swift */,
-			);
-			path = CommonStyle;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,15 +331,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				18047D5D2760B035007254B6 /* SignInView.swift in Sources */,
+				18FA8D7A27673E5D00C20F91 /* ImgAssets.swift in Sources */,
 				18047D2727609E21007254B6 /* ContentView.swift in Sources */,
 				18047D632760B6F9007254B6 /* CommonTextField.swift in Sources */,
-				18A2173E276364010094FC7D /* ColorExtension.swift in Sources */,
 				18047D2527609E21007254B6 /* AnhnqInstaCloneApp.swift in Sources */,
-				18FA8D702766FDC500C20F91 /* ViewExtension.swift in Sources */,
+				18FA8D702766FDC500C20F91 /* Extensions.swift in Sources */,
 				18047D592760AA10007254B6 /* SignUpView.swift in Sources */,
-				18047D612760B4D8007254B6 /* BottomButtonStyle.swift in Sources */,
-				18FA8D752767052C00C20F91 /* CommonTextFieldStyle.swift in Sources */,
+				18FA8D752767052C00C20F91 /* CommonStyle.swift in Sources */,
+				18C5D2A4276837E700C0EA6B /* SignInViewModel.swift in Sources */,
+				18C5D2A627683E1000C0EA6B /* SignUpViewModel.swift in Sources */,
 				18047D5F2760B058007254B6 /* GradientBackground.swift in Sources */,
+				18C5D2A827687B8C00C0EA6B /* Constants.swift in Sources */,
+				1866345E2769CE8100C1B515 /* testView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

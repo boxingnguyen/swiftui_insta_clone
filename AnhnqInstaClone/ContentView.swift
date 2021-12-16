@@ -17,6 +17,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
 //        set color scheme
-//            .preferredColorScheme(.dark)
+            .preferredColorScheme(.dark)
     }
 }

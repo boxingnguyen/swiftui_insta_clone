@@ -8,34 +8,32 @@
 import SwiftUI
 
 struct CommonTextField: View {
+    @Binding var value: String
     var hint: String = ""
+    var errMsg: String = ""
     var isSecure = false
-    @State var value = ""
 
     var body: some View {
-        if isSecure {
-            SecureField("", text: $value)
-                .placeholder(hint, when: value.isEmpty)
-                .textFieldStyle(CommonTextFieldStyle())
-
-        } else {
-            TextField("", text: $value)
-                .placeholder(hint, when: value.isEmpty)
-                .textFieldStyle(CommonTextFieldStyle())
+        VStack(alignment: .leading) {
+            if isSecure {
+                SecureField("", text: $value)
+                    .placeholder(hint, when: value.isEmpty)
+                    .textFieldStyle(CommonTextFieldStyle())
+            } else {
+                TextField("", text: $value)
+                    .placeholder(hint, when: value.isEmpty)
+                    .textFieldStyle(CommonTextFieldStyle())
+            }
+            Text(errMsg)
+                .fixedSize(horizontal: false, vertical: true)
+                .font(.caption)
+                .foregroundColor(.red)
         }
     }
-
-//    func placeholder(
-//        _ text: String,
-//        when shouldShow: Bool,
-//        alignment: Alignment = .leading) -> some View
-//    {
-//        placeholder(when: shouldShow, alignment: alignment) { Text(text).foregroundColor(.white).padding(7) }
-//    }
 }
 
 struct CommonTextField_Previews: PreviewProvider {
     static var previews: some View {
-        CommonTextField()
+        CommonTextField(value: .constant(""), hint: "abc").background(.blue)
     }
 }

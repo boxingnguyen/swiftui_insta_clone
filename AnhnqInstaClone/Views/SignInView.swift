@@ -8,53 +8,59 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State private var email = ""
-    @State private var pasword = ""
-    @State private var username = ""
+    @StateObject private var viewModel = SignInViewModel()
 
     var body: some View {
         NavigationView {
             GradientBackground()
                 .overlay(
-                    VStack {
-                        Image("Instagram_logo_white")
-                            .renderingMode(.template)
-                            .foregroundColor(.white)
-                        Group {
-                            CommonTextField(hint: "Email", value: email)
-                            CommonTextField(hint: "Password", isSecure: true, value: pasword)
-                        }.padding(.top)
-
-                        Button("Log In") {
-                            // login and go to home
-                            print("pressed")
-                        }.padding([.vertical])
-                            .buttonStyle(BottomButtonStyle())
-                        Spacer()
-                            .frame(height: 20)
-
-                        HStack {
-                            Text("Forgot your password?").foregroundColor(.white)
-                            Button(action: {
-                                // goto forgot password
-                            }) {
-                                Text("Get help signing in.")
-                                    .bold()
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        Spacer()
-                        HStack {
-                            Text("Don't have an account?")
-                            NavigationLink(destination: SignUpView()) {
-                                Text("Sign Up")
-                                    .bold()
-                                    .foregroundColor(.white)
-                            }
-                        }
-                    }.padding()
+                    _body
                 )
         }
+    }
+
+    var _body: some View {
+        VStack {
+            Image(ImgAssets.instaLogo)
+                .renderingMode(.template)
+                .foregroundColor(.white)
+            Group {
+                CommonTextField(value: $viewModel.email, hint: "Email", errMsg: viewModel.emailMsgErr)
+                CommonTextField(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr, isSecure: true)
+            }.padding(.top)
+            Button("Log In") {
+                // login and go to home
+                viewModel.signIn()
+            }.padding([.vertical])
+                .buttonStyle(BottomButtonStyle())
+                .disabled(!viewModel.canSubmit)
+                .opacity(viewModel.canSubmit ? 1 : 0.6)
+            Spacer()
+                .frame(height: 20)
+            HStack {
+                Text("Forgot your password?")
+                    .foregroundColor(.white)
+                    .font(.body)
+                Button(action: {
+                    // goto forgot password
+                }) {
+                    Text("Get help signing in.")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                }
+            }
+            Spacer()
+            HStack {
+                Text("Don't have an account?")
+                    .foregroundColor(.white)
+                    .font(.body)
+                NavigationLink(destination: SignUpView()) {
+                    Text("Sign Up")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+            }
+        }.padding()
     }
 }
 
