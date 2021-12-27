@@ -1,0 +1,99 @@
+{
+	"id": "95f6df6c-1e1e-4d75-083b-fd0174e86098",
+	"name": "IOS-Instagram",
+	"description": "IOS Instagram Training",
+	"order": [
+		"a677e879-85c9-5dc6-7614-9dde4f642048",
+		"e45ebfb4-83cf-5075-7b79-3f34145580ca"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1638434539220,
+	"owner": "1089780",
+	"public": false,
+	"requests": [
+		{
+			"id": "a677e879-85c9-5dc6-7614-9dde4f642048",
+			"headers": "",
+			"headerData": [],
+			"url": "https://run.mocky.io/v3/603ceccd-84fc-4d0d-89a3-f40140e729f4",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "95f6df6c-1e1e-4d75-083b-fd0174e86098",
+			"data": [
+				{
+					"key": "email",
+					"value": "dotrongan2806@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "login",
+			"description": "login",
+			"descriptionFormat": "html",
+			"time": 1638434761304,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "e45ebfb4-83cf-5075-7b79-3f34145580ca",
+			"headers": "",
+			"headerData": [],
+			"url": "https://run.mocky.io/v3/255afa3f-ffb8-4d97-8bc2-2dc397d611dc",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "95f6df6c-1e1e-4d75-083b-fd0174e86098",
+			"data": [
+				{
+					"key": "username",
+					"value": "nhudang",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "fullname",
+					"value": "nhu van dang",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "register",
+			"description": "register",
+			"descriptionFormat": "html",
+			"time": 1638435242700,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}

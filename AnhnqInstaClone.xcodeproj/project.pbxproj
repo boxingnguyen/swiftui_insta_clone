@@ -18,7 +18,19 @@
 		18047D5D2760B035007254B6 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D5C2760B035007254B6 /* SignInView.swift */; };
 		18047D5F2760B058007254B6 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D5E2760B058007254B6 /* GradientBackground.swift */; };
 		18047D632760B6F9007254B6 /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D622760B6F9007254B6 /* CommonTextField.swift */; };
+		180C436F27795291009135C6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C436E27795291009135C6 /* ImagePicker.swift */; };
+		180C4372277983BC009135C6 /* IOS-Instagram.postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 180C4371277983BC009135C6 /* IOS-Instagram.postman_collection.json */; };
 		1866345E2769CE8100C1B515 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866345D2769CE8100C1B515 /* testView.swift */; };
+		18B0D0322774263E006E4122 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0D0312774263E006E4122 /* HomeView.swift */; };
+		18B0D03427742651006E4122 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0D03327742651006E4122 /* SearchView.swift */; };
+		18B0D0362774265E006E4122 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0D0352774265E006E4122 /* ReelsView.swift */; };
+		18B0D03827742670006E4122 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0D03727742670006E4122 /* ActivityView.swift */; };
+		18B0D03A2774267A006E4122 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0D0392774267A006E4122 /* ProfileView.swift */; };
+		18B0D03C277426B2006E4122 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0D03B277426B2006E4122 /* DashboardView.swift */; };
+		18B3D00E2770449A00DB5BB6 /* SignInHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3D00D2770449A00DB5BB6 /* SignInHandler.swift */; };
+		18B3D010277044A800DB5BB6 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3D00F277044A800DB5BB6 /* APIHandler.swift */; };
+		18B3D01327705C5200DB5BB6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18B3D01227705C5200DB5BB6 /* Alamofire */; };
+		18B3D0152770711B00DB5BB6 /* WoofResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B3D0142770711B00DB5BB6 /* WoofResponse.swift */; };
 		18C5D2A4276837E700C0EA6B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5D2A3276837E700C0EA6B /* SignInViewModel.swift */; };
 		18C5D2A627683E1000C0EA6B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5D2A527683E1000C0EA6B /* SignUpViewModel.swift */; };
 		18C5D2A827687B8C00C0EA6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5D2A727687B8C00C0EA6B /* Constants.swift */; };
@@ -59,7 +71,18 @@
 		18047D5C2760B035007254B6 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		18047D5E2760B058007254B6 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		18047D622760B6F9007254B6 /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
+		180C436E27795291009135C6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		180C4371277983BC009135C6 /* IOS-Instagram.postman_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "IOS-Instagram.postman_collection.json"; sourceTree = "<group>"; };
 		1866345D2769CE8100C1B515 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
+		18B0D0312774263E006E4122 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		18B0D03327742651006E4122 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		18B0D0352774265E006E4122 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
+		18B0D03727742670006E4122 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		18B0D0392774267A006E4122 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		18B0D03B277426B2006E4122 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		18B3D00D2770449A00DB5BB6 /* SignInHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHandler.swift; sourceTree = "<group>"; };
+		18B3D00F277044A800DB5BB6 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		18B3D0142770711B00DB5BB6 /* WoofResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofResponse.swift; sourceTree = "<group>"; };
 		18C5D2A3276837E700C0EA6B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		18C5D2A527683E1000C0EA6B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		18C5D2A727687B8C00C0EA6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -73,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B3D01327705C5200DB5BB6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +145,9 @@
 				18FA8D76276739E100C20F91 /* Models */,
 				18C5D2A22768377D00C0EA6B /* ViewModels */,
 				18047D2627609E21007254B6 /* ContentView.swift */,
+				18B3D00C2770444B00DB5BB6 /* Services */,
 				18047D502760A69B007254B6 /* Helpers */,
+				180C43702779839F009135C6 /* Resources */,
 				18047D2827609E23007254B6 /* Assets.xcassets */,
 				18047D2A27609E23007254B6 /* Preview Content */,
 			);
@@ -161,6 +187,7 @@
 				18FA8D712767019400C20F91 /* CommonViews */,
 				18FA8D7927673E5D00C20F91 /* ImgAssets.swift */,
 				18C5D2A727687B8C00C0EA6B /* Constants.swift */,
+				180C436E27795291009135C6 /* ImagePicker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -171,8 +198,31 @@
 				18047D582760AA10007254B6 /* SignUpView.swift */,
 				18047D5C2760B035007254B6 /* SignInView.swift */,
 				1866345D2769CE8100C1B515 /* testView.swift */,
+				18B0D0312774263E006E4122 /* HomeView.swift */,
+				18B0D03327742651006E4122 /* SearchView.swift */,
+				18B0D0352774265E006E4122 /* ReelsView.swift */,
+				18B0D03727742670006E4122 /* ActivityView.swift */,
+				18B0D0392774267A006E4122 /* ProfileView.swift */,
+				18B0D03B277426B2006E4122 /* DashboardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		180C43702779839F009135C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				180C4371277983BC009135C6 /* IOS-Instagram.postman_collection.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18B3D00C2770444B00DB5BB6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				18B3D00D2770449A00DB5BB6 /* SignInHandler.swift */,
+				18B3D00F277044A800DB5BB6 /* APIHandler.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		18C5D2A22768377D00C0EA6B /* ViewModels */ = {
@@ -196,6 +246,7 @@
 		18FA8D76276739E100C20F91 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				18B3D0142770711B00DB5BB6 /* WoofResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +267,9 @@
 			dependencies = (
 			);
 			name = AnhnqInstaClone;
+			packageProductDependencies = (
+				18B3D01227705C5200DB5BB6 /* Alamofire */,
+			);
 			productName = AnhnqInstaClone;
 			productReference = 18047D2127609E21007254B6 /* AnhnqInstaClone.app */;
 			productType = "com.apple.product-type.application";
@@ -288,6 +342,9 @@
 				Base,
 			);
 			mainGroup = 18047D1827609E21007254B6;
+			packageReferences = (
+				18B3D01127705C5200DB5BB6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 18047D2227609E21007254B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -304,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180C4372277983BC009135C6 /* IOS-Instagram.postman_collection.json in Resources */,
 				18047D2C27609E23007254B6 /* Preview Assets.xcassets in Resources */,
 				18047D2927609E23007254B6 /* Assets.xcassets in Resources */,
 			);
@@ -332,16 +390,26 @@
 			files = (
 				18047D5D2760B035007254B6 /* SignInView.swift in Sources */,
 				18FA8D7A27673E5D00C20F91 /* ImgAssets.swift in Sources */,
+				18B3D00E2770449A00DB5BB6 /* SignInHandler.swift in Sources */,
 				18047D2727609E21007254B6 /* ContentView.swift in Sources */,
 				18047D632760B6F9007254B6 /* CommonTextField.swift in Sources */,
+				18B0D0322774263E006E4122 /* HomeView.swift in Sources */,
 				18047D2527609E21007254B6 /* AnhnqInstaCloneApp.swift in Sources */,
 				18FA8D702766FDC500C20F91 /* Extensions.swift in Sources */,
+				18B3D0152770711B00DB5BB6 /* WoofResponse.swift in Sources */,
 				18047D592760AA10007254B6 /* SignUpView.swift in Sources */,
+				18B0D03427742651006E4122 /* SearchView.swift in Sources */,
 				18FA8D752767052C00C20F91 /* CommonStyle.swift in Sources */,
 				18C5D2A4276837E700C0EA6B /* SignInViewModel.swift in Sources */,
+				180C436F27795291009135C6 /* ImagePicker.swift in Sources */,
+				18B0D03827742670006E4122 /* ActivityView.swift in Sources */,
 				18C5D2A627683E1000C0EA6B /* SignUpViewModel.swift in Sources */,
 				18047D5F2760B058007254B6 /* GradientBackground.swift in Sources */,
+				18B0D0362774265E006E4122 /* ReelsView.swift in Sources */,
+				18B0D03C277426B2006E4122 /* DashboardView.swift in Sources */,
+				18B3D010277044A800DB5BB6 /* APIHandler.swift in Sources */,
 				18C5D2A827687B8C00C0EA6B /* Constants.swift in Sources */,
+				18B0D03A2774267A006E4122 /* ProfileView.swift in Sources */,
 				1866345E2769CE8100C1B515 /* testView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,6 +757,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18B3D01127705C5200DB5BB6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18B3D01227705C5200DB5BB6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18B3D01127705C5200DB5BB6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18047D1927609E21007254B6 /* Project object */;
 }

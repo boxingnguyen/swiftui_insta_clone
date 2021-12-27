@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import SwiftUI
 
 class SignUpViewModel: ObservableObject {
     let didChange = PassthroughSubject<SignUpViewModel, Never>()
@@ -25,9 +26,17 @@ class SignUpViewModel: ObservableObject {
         }
     }
 
+    @Published var profileImage: Image?
+    @Published var pickedImage: Image?
+    @Published var showingActionSheet = false
+    @Published var showingImagePicker = false
+    @Published var imageData = Data()
+    @Published var sourceType: UIImagePickerController.SourceType = .photoLibrary
+
     @Published var isEmailValid = false
     @Published var isPasswordValid = false
     @Published var canSubmit = false
+
     private var cancellableSet: Set<AnyCancellable> = []
 
     init() {
@@ -67,5 +76,12 @@ class SignUpViewModel: ObservableObject {
 
     func signUp() {
         print("Sign in \(email)")
+    }
+
+    func loadImage() {
+        guard let inputImage = pickedImage else {
+            return
+        }
+        profileImage = inputImage
     }
 }

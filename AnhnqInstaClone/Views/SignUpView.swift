@@ -22,40 +22,75 @@ struct SignUpView: View {
     }
 
     var _body: some View {
-        VStack {
-            Image(ImgAssets.plusPhoto)
-                .renderingMode(.template)
-                .foregroundColor(.white)
-            Group {
-                CommonTextField(value: $viewModel.email, hint: "Email", errMsg: viewModel.emailMsgErr)
-                CommonTextField(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr)
-                CommonTextField(value: $viewModel.fullname, hint: "Fullname")
-                CommonTextField(value: $viewModel.username, hint: "Username")
-            }.padding(.top)
-            Button("Sign Up") {
-                print("pressed")
-            }
-            .padding(.top)
-            .buttonStyle(BottomButtonStyle())
-            .disabled(!viewModel.canSubmit)
-            .opacity(viewModel.canSubmit ? 1 : 0.6)
-            Spacer()
-            HStack {
-                Text("Already have an account?")
-                    .foregroundColor(.white)
-                    .font(.body)
+        ScrollView {
+            VStack {
+                profileView
 
-                Button(action: {
-                    // back to SignIn
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("Sign In")
-                        .font(.headline)
-                        .foregroundColor(.white)
+                Group {
+                    CommonTextField(value: $viewModel.email, hint: "Email", errMsg: viewModel.emailMsgErr)
+                    CommonTextField(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr)
+                    CommonTextField(value: $viewModel.fullname, hint: "Fullname")
+                    CommonTextField(value: $viewModel.username, hint: "Username")
+                }.padding(.top)
+
+                Button("Sign Up") {
+                    print("pressed")
                 }
-            }
+                .padding(.top)
+                .buttonStyle(BottomButtonStyle())
+                .disabled(!viewModel.canSubmit)
+                .opacity(viewModel.canSubmit ? 1 : 0.6)
+                Spacer()
 
-        }.padding()
+                HStack {
+                    Text("Already have an account?")
+                        .foregroundColor(.white)
+                        .font(.body)
+
+                    Button(action: {
+                        // back to SignIn
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("Sign In")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
+                }
+            }.padding()
+        }.sheet(isPresented: $viewModel.showingImagePicker, onDismiss: viewModel.loadImage) {
+            ImagePicker(pickedImage: $viewModel.pickedImage, showImagePicker: $viewModel.showingImagePicker, imageData: $viewModel.imageData)
+        }.actionSheet(isPresented: $viewModel.showingActionSheet) {
+            ActionSheet(title: Text("Choose a photo"), buttons: [
+                .default(Text("Choose from library")) {
+                    viewModel.sourceType = .photoLibrary
+                    viewModel.showingImagePicker = true
+                },
+                .default(Text("Take a photo")) {
+                    viewModel.sourceType = .camera
+                    viewModel.showingImagePicker = true
+                }, .cancel()
+
+            ])
+        }
+    }
+
+    private var profileView: some View {
+        Group {
+            if let profileImage = viewModel.profileImage {
+                AnyView(profileImage.resizable()
+                    .clipShape(Circle())
+                    .frame(width: 100, height: 100)
+                )
+            } else {
+                AnyView(Image(ImgAssets.plusPhoto)
+                    .renderingMode(.template)
+                    .foregroundColor(.white))
+            }
+        }
+        .onTapGesture {
+            print("show action")
+            viewModel.showingActionSheet = true
+        }
     }
 }
 

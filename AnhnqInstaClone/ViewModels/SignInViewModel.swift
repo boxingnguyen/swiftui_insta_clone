@@ -18,6 +18,26 @@ class SignInViewModel: ObservableObject {
     @Published var canSubmit = false
     private var cancellableSet: Set<AnyCancellable> = []
 
+//    private var isLoadingPublisher: AnyPublisher<Bool, Never> {
+//        SignInHandler.$isLoading
+//            .receive(on: RunLoop.main)
+//            .map { $0 }
+//            .eraseToAnyPublisher()
+//    }
+
+//    private var isAuthenticatedPublisher: AnyPublisher<String, Never> {
+//        SignInHandler.$woofResponse
+//            .receive(on: RunLoop.main)
+//            .map { response in
+//                guard let response = response else {
+//                    return ""
+//                }
+//
+//                return response.url ?? ""
+//            }
+//            .eraseToAnyPublisher()
+//    }
+
     init() {
         $email.map { email in
             email.isEmpty || Constants.emailPredicate.evaluate(with: email)
@@ -37,6 +57,16 @@ class SignInViewModel: ObservableObject {
             }
             .assign(to: \.canSubmit, on: self)
             .store(in: &cancellableSet)
+//
+//        isLoadingPublisher
+//            .receive(on: RunLoop.main)
+//            .assign(to: \.isLoading, on: self)
+//            .store(in: &disposables)
+//
+//        isAuthenticatedPublisher
+//            .receive(on: RunLoop.main)
+//            .assign(to: \.woofUrl, on: self)
+//            .store(in: &disposables)
     }
 
     var emailMsgErr: String {
