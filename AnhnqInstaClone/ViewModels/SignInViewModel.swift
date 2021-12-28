@@ -26,7 +26,7 @@ class SignInViewModel: ObservableObject {
 //    }
 
 //    private var isAuthenticatedPublisher: AnyPublisher<String, Never> {
-//        SignInHandler.$woofResponse
+//        SignInHandler.$WoofModel
 //            .receive(on: RunLoop.main)
 //            .map { response in
 //                guard let response = response else {

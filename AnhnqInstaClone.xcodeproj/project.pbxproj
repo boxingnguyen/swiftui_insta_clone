@@ -20,6 +20,8 @@
 		18047D632760B6F9007254B6 /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18047D622760B6F9007254B6 /* CommonTextField.swift */; };
 		180C436F27795291009135C6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C436E27795291009135C6 /* ImagePicker.swift */; };
 		180C4372277983BC009135C6 /* IOS-Instagram.postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 180C4371277983BC009135C6 /* IOS-Instagram.postman_collection.json */; };
+		180C4374277987E8009135C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C4373277987E8009135C6 /* UserModel.swift */; };
+		180C43762779ACEC009135C6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C43752779ACEC009135C6 /* AuthService.swift */; };
 		1866345E2769CE8100C1B515 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866345D2769CE8100C1B515 /* testView.swift */; };
 		18B0D0322774263E006E4122 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0D0312774263E006E4122 /* HomeView.swift */; };
 		18B0D03427742651006E4122 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0D03327742651006E4122 /* SearchView.swift */; };
@@ -73,6 +75,8 @@
 		18047D622760B6F9007254B6 /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
 		180C436E27795291009135C6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		180C4371277983BC009135C6 /* IOS-Instagram.postman_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "IOS-Instagram.postman_collection.json"; sourceTree = "<group>"; };
+		180C4373277987E8009135C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		180C43752779ACEC009135C6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1866345D2769CE8100C1B515 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		18B0D0312774263E006E4122 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		18B0D03327742651006E4122 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 			children = (
 				18B3D00D2770449A00DB5BB6 /* SignInHandler.swift */,
 				18B3D00F277044A800DB5BB6 /* APIHandler.swift */,
+				180C43752779ACEC009135C6 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				18B3D0142770711B00DB5BB6 /* WoofResponse.swift */,
+				180C4373277987E8009135C6 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,9 +401,11 @@
 				18047D632760B6F9007254B6 /* CommonTextField.swift in Sources */,
 				18B0D0322774263E006E4122 /* HomeView.swift in Sources */,
 				18047D2527609E21007254B6 /* AnhnqInstaCloneApp.swift in Sources */,
+				180C43762779ACEC009135C6 /* AuthService.swift in Sources */,
 				18FA8D702766FDC500C20F91 /* Extensions.swift in Sources */,
 				18B3D0152770711B00DB5BB6 /* WoofResponse.swift in Sources */,
 				18047D592760AA10007254B6 /* SignUpView.swift in Sources */,
+				180C4374277987E8009135C6 /* UserModel.swift in Sources */,
 				18B0D03427742651006E4122 /* SearchView.swift in Sources */,
 				18FA8D752767052C00C20F91 /* CommonStyle.swift in Sources */,
 				18C5D2A4276837E700C0EA6B /* SignInViewModel.swift in Sources */,

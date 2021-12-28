@@ -24,17 +24,21 @@ struct SignInView: View {
             Image(ImgAssets.instaLogo)
                 .renderingMode(.template)
                 .foregroundColor(.white)
+
             Group {
                 CommonTextField(value: $viewModel.email, hint: "Email", errMsg: viewModel.emailMsgErr)
                 CommonTextField(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr, isSecure: true)
             }.padding(.top)
-            Button("Log In") {
-                // login and go to home
-                viewModel.signIn()
-            }.padding([.vertical])
-                .buttonStyle(BottomButtonStyle())
-                .disabled(!viewModel.canSubmit)
-                .opacity(viewModel.canSubmit ? 1 : 0.6)
+
+            NavigationLink(destination: Dashboard()) {
+                Button("Log In") {
+                    // login and go to home
+                    viewModel.signIn()
+                }.padding([.vertical])
+                    .buttonStyle(BottomButtonStyle())
+                    .disabled(!viewModel.canSubmit)
+                    .opacity(viewModel.canSubmit ? 1 : 0.6)
+            }
             Spacer()
                 .frame(height: 20)
             HStack {

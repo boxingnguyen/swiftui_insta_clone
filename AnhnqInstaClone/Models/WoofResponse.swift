@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class WoofResponse: Decodable {
+class WoofModel: Decodable {
     var fileSizeBytes: Int?
     var url: String?
     
