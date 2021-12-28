@@ -5,20 +5,25 @@
 //  Created by anhnq2 on 15/12/2021.
 //
 
-import Combine
 import SwiftUI
 
-struct testView: View {
-    @State var text = ""
-    @ObservedObject private var viewModel = SignUpViewModel()
-
+struct TestView: View {
     var body: some View {
-        TextField("text", text: $viewModel.username)
+        StyledText(verbatim: "👩‍👩‍👦someText1 gibberish gibberish gibberish")
+            .style(.highlight(), ranges: { [$0.range(of: "eTex"), $0.range(of: "1"), $0.range(of: "gibberish")] })
+            .style(.bold())
     }
 }
 
-struct testView_Previews: PreviewProvider {
+struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        testView()
+        TestView()
     }
+}
+
+// An internal convenience extension that could be defined outside this pacakge.
+// This wouldn't be a general-purpose way to highlight, but shows how a caller could create
+// their own extensions
+extension TextStyle {
+    static func highlight() -> TextStyle { .foregroundColor(.red) }
 }

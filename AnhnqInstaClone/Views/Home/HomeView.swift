@@ -12,23 +12,35 @@ struct HomeView: View {
     let _messageIcon = "message"
 
     var body: some View {
-        VStack {
-            HStack(spacing: 16) {
-                Image(ImgAssets.instaLogo)
-                    .renderingMode(.template)
-                    .foregroundColor(.black)
-                Spacer()
-                Image(systemName: _plusIcon)
-                    .foregroundColor(.black)
-                Image(systemName: _messageIcon)
-                    .foregroundColor(.green)
-            }
-            .padding(.horizontal, 16)
+        VStack(alignment: .leading) {
+            ZStack {
+                HStack {
+                    ZStack {
+                        Image(ImgAssets.instaLogo)
+                            .resizable()
+                            .renderingMode(.template)
+                            .foregroundColor(.black)
+                    }.aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 50, alignment: .leading)
+                    Spacer()
+                    Image(systemName: _plusIcon)
+                        .foregroundColor(.black)
+                        .scaleEffect(1.5)
+                    Spacer()
+                        .frame(width: 20)
+                    Image(systemName: _messageIcon)
+                        .foregroundColor(.green)
+                        .scaleEffect(1.5)
+                }
+                .padding(.horizontal, 16)
+            }.background(.white)
+
             ScrollView {
-                //                    StoryHomeView(data: homeState.data, isSelected: homeState.isSelectedStory)
-                Divider()
-                //                    ListDataHomeView()
-                Spacer()
+                StoryView()
+
+                ForEach(0 ..< 9) { _ in
+                    PostView()
+                }
             }
         }
     }

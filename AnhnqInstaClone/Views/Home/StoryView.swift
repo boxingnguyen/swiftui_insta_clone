@@ -1,71 +1,50 @@
-////
-////  StoryView.swift
-////  AnhnqInstaClone
-////
-////  Created by anhnq2 on 28/12/2021.
-////
 //
-//import SwiftUI
-//struct Post {}
+//  StoryView.swift
+//  AnhnqInstaClone
 //
-//struct StoryView: View {
-//    var data: [Post]
-//    var isSelected: (Int) -> Void
+//  Created by anhnq2 on 28/12/2021.
 //
-//    var body: some View {
-//        ScrollView(.horizontal, showsIndicators: false) {
-//            HStack {
-//                Spacer(minLength: 10)
-//
-//                VStack {
-//                    Button(action: {
-//                        // TODO: view story
-//
-//                    }) {
-//                        ZStack(alignment: .bottomTrailing) {
-////                            Image(ConstantAsset.image1).resizable().frame(width: 56, height: 56).clipShape(Circle())
-////
-////                            ButtonAdd(size: 12)
-//                        }
-//                    }
-////
-////                    TextCommon(
-////                        text: ConstantString.storyMain,
-////                        color: Color.gray)
-//                }
-//
-//                ForEach(0 ..< self.data.count) { i in
-//
-//                    VStack {
-//                        ZStack {
-////                            Image(self.data[i].image)
-////                                .resizable()
-////                                .frame(width: 60, height: 60)
-////                                .clipShape(Circle())
-////                            if !self.data[i].seen {
-////                                Circle()
-////                                    .trim(from: 0, to: 2)
-////                                    .stroke(
-////                                        AngularGradient(
-////                                            gradient: .init(colors: [.yellow, .orange, .red]),
-////                                            center: .center),
-////                                        style: StrokeStyle(lineWidth: 4, dash: [self.data[i].loading ? 4 : 0]))
-////                                    .frame(width: 56, height: 56)
-////                                    .rotationEffect(.init(degrees: self.data[i].loading ? 360 : 0))
-//                            }
-//                        }
-////                                TextCommon(text: self.data[i].name, color: Color.black)
-//                    }
-//                    .onTapGesture {}
-//                }
-//            }
-//        }
-//        .padding(.top, 8)
-//    }
-//}
-//
-//struct StoryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StoryView()
-//    }
-//}
+
+import SwiftUI
+
+struct StoryView: View {
+    private let randomName = ["Boxing", "Andt", "Tupa", "Huypq", "Quangvv", "Haipv", "Huynd", "Ten dai vai loz the deo nao"]
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(0 ..< 9) { _ in
+                    VStack(alignment: .center) {
+                        AsyncImage(url: URL(string: "https://picsum.photos/200")) { image in
+                            image.resizable()
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                                .overlay {
+                                    Circle().stroke(
+                                        AngularGradient(
+                                            gradient: .init(colors: [.pink, .yellow, .orange, .purple, .red]),
+                                            center: .center
+                                        ), lineWidth: 2
+                                    )
+                                }
+                                .shadow(radius: 7)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 50, height: 50)
+
+                        Text(randomName.randomElement()!)
+                            .frame(width: 69, alignment: .center)
+                            .lineLimit(1)
+                    }.background(.white)
+                }
+            }
+            .padding(8)
+        }
+    }
+}
+
+struct StoryView_Previews: PreviewProvider {
+    static var previews: some View {
+        StoryView()
+    }
+}
