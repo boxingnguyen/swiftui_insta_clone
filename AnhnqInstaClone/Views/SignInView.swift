@@ -30,7 +30,7 @@ struct SignInView: View {
                 CommonTextFieldView(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr, isSecure: true)
             }.padding(.top)
 
-            NavigationLink(destination: Dashboard()) {
+            NavigationLink(destination: DashboardView()) {
                 Button("Log In") {
                     // login and go to home
                     viewModel.signIn()

@@ -9,14 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        SignInView()
+        DashboardView()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//        set color scheme
-            .preferredColorScheme(.dark)
     }
 }

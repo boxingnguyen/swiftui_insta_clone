@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Dashboard: View {
+struct DashboardView: View {
     @State var selection = 0
     let selectedImages = [ImgAssets.homeSelect, ImgAssets.searchSelect, ImgAssets.reelsSelected, ImgAssets.likeSelect, ImgAssets.profileSelect]
     let unselectedImages = [ImgAssets.homeUnselect, ImgAssets.searchUnselect, ImgAssets.reelsUnselected, ImgAssets.likeUnselect, ImgAssets.profileUnselect]
@@ -40,8 +40,8 @@ struct Dashboard: View {
     }
 }
 
-struct Dashboard_Previews: PreviewProvider {
+struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        Dashboard()
+        DashboardView()
     }
 }

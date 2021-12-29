@@ -12,7 +12,7 @@ struct GridImagesView: View {
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 5) {
+            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
                 ForEach(0 ..< 20) { _ in
                     AsyncImageView(url: Constants.randomeImgUrl)
                         .scaledToFill()
