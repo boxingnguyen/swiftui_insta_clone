@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    let _plusIcon = "plus.app"
-    let _messageIcon = "message"
+    private let plusIcon = "plus.app"
+    private let messageIcon = "message"
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,12 +23,12 @@ struct HomeView: View {
                     }.aspectRatio(contentMode: .fit)
                         .frame(width: 100, height: 50, alignment: .leading)
                     Spacer()
-                    Image(systemName: _plusIcon)
+                    Image(systemName: plusIcon)
                         .foregroundColor(.black)
                         .scaleEffect(1.5)
                     Spacer()
                         .frame(width: 20)
-                    Image(systemName: _messageIcon)
+                    Image(systemName: messageIcon)
                         .foregroundColor(.green)
                         .scaleEffect(1.5)
                 }

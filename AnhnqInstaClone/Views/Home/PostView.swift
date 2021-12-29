@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct PostView: View {
-    private let randomName = ["Boxing", "Andt", "Tupa", "Huypq", "Quangvv", "Haipv", "Huynd"].randomElement()!
-    private let randomeImgUrl = "https://picsum.photos/200"
     private let moreIcon = "ellipsis"
     private let likeIcon = "heart"
     private let commentIcon = "bubble.right"
@@ -27,16 +25,14 @@ struct PostView: View {
     
     private var titleView: some View {
         HStack() {
-            AsyncImage(url: URL(string: randomeImgUrl)) { image in
-                image.resizable()
-                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-            } placeholder: {
-                ProgressView()
-            }
+            AsyncImageView(url: Constants.randomeImgUrl)
+            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             .frame(width: 50, height: 50)
             .padding(.trailing, 8)
             
-            Text(randomName)
+            Text(randomName.randomElement()!)
+                .font(.body)
+                .bold()
             Spacer()
             Image(systemName: moreIcon)
         }
@@ -44,12 +40,9 @@ struct PostView: View {
     }
     
     private var mediaView: some View {
-        AsyncImage(url: URL(string: randomeImgUrl)) { image in
-            image.resizable()
-                .frame(height: 300)
-        } placeholder: {
-            ProgressView()
-        }
+        // TODO: display in case video or carousel
+        AsyncImageView(url: Constants.randomeImgUrl)
+            .frame(height: 300)
     }
     
     private var interactionView : some View {
@@ -65,15 +58,11 @@ struct PostView: View {
     }
     
     private var captionView : some View {
-        StyledText(verbatim: "\(randomName) \(randomString(length: 20)) \(randomString(length: 10)) \(randomString(length: 80))")
-            .style(.bold(), ranges: { [$0.range(of: randomName)] })
+        StyledText(verbatim: "\(randomName.randomElement()!) \(randomString(length: 20)) \(randomString(length: 10)) \(randomString(length: 50)) \(randomString(length: 80))")
+            .style(.bold(), ranges: { [$0.range(of: randomName.randomElement()!)] })
             .padding(8)
             .lineLimit(3)
-    }
-    
-    func randomString(length: Int) -> String {
-      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-      return String((0..<length).map{ _ in letters.randomElement()! })
+            .font(.caption)
     }
 }
 

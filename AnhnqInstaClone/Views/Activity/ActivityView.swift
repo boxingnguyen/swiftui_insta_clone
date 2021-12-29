@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ActivityView: View {
+    @StateObject private var viewModel = ActivityViewModel()
+
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color.yellow
+        ScrollView {
+            VStack {
+                ForEach(0 ..< 20) { _ in
+                    ActivityItem()
+                }
             }
-            .navigationTitle("Activity View")
+            .padding()
         }
     }
 }

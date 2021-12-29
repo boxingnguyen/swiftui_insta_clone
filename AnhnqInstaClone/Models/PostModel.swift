@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Post {
-    var owner: User
+struct PostModel {
+    var owner: UserModel
     var content: [String] // image or video url
     var caption: String
     var isFavorite: Bool

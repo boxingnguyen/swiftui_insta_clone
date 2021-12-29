@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+public func randomString(length: Int) -> String {
+    let letters = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    return String((0 ..< length).map { _ in letters.randomElement()! })
+}
+
+public let randomName = ["Boxing", "Andt", "Tupa", "Huypq", "Quangvv", "Haipv", "Huynd"]
+
 struct TestView: View {
     var body: some View {
         StyledText(verbatim: "👩‍👩‍👦someText1 gibberish gibberish gibberish")

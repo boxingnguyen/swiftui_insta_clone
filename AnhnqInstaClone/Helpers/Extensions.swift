@@ -87,3 +87,12 @@ extension String {
         return stringArray
     }
 }
+
+// MARK: EnvironmentValues extension
+
+extension EnvironmentValues {
+    var imageCache: ImageCache {
+        get { self[ImageCacheKey.self] }
+        set { self[ImageCacheKey.self] = newValue }
+    }
+}

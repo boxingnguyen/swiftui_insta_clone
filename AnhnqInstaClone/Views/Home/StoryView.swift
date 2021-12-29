@@ -15,26 +15,23 @@ struct StoryView: View {
             HStack {
                 ForEach(0 ..< 9) { _ in
                     VStack(alignment: .center) {
-                        AsyncImage(url: URL(string: "https://picsum.photos/200")) { image in
-                            image.resizable()
-                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                                .overlay {
-                                    Circle().stroke(
-                                        AngularGradient(
-                                            gradient: .init(colors: [.pink, .yellow, .orange, .purple, .red]),
-                                            center: .center
-                                        ), lineWidth: 2
-                                    )
-                                }
-                                .shadow(radius: 7)
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        .frame(width: 50, height: 50)
+                        AsyncImageView(url: Constants.randomeImgUrl)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            .overlay {
+                                Circle().stroke(
+                                    AngularGradient(
+                                        gradient: .init(colors: [.pink, .yellow, .orange, .purple, .red]),
+                                        center: .center
+                                    ), lineWidth: 2
+                                )
+                            }
+                            .shadow(radius: 7)
+                            .frame(width: 50, height: 50)
 
                         Text(randomName.randomElement()!)
                             .frame(width: 69, alignment: .center)
                             .lineLimit(1)
+                            .font(.caption)
                     }.background(.white)
                 }
             }

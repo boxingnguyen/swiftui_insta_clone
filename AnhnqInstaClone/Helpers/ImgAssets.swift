@@ -32,4 +32,5 @@ struct ImgAssets {
     static let play = "play"
     static let reelsSelected = "reels_selected"
     static let reelsUnselected = "reels_unselected"
+    static let avatar = "avatar"
 }

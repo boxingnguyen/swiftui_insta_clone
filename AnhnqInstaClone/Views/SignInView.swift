@@ -12,7 +12,7 @@ struct SignInView: View {
 
     var body: some View {
         NavigationView {
-            GradientBackground()
+            GradientBackgroundView()
                 .overlay(
                     _body
                 )
@@ -26,8 +26,8 @@ struct SignInView: View {
                 .foregroundColor(.white)
 
             Group {
-                CommonTextField(value: $viewModel.email, hint: "Email", errMsg: viewModel.emailMsgErr)
-                CommonTextField(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr, isSecure: true)
+                CommonTextFieldView(value: $viewModel.email, hint: "Email", errMsg: viewModel.emailMsgErr)
+                CommonTextFieldView(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr, isSecure: true)
             }.padding(.top)
 
             NavigationLink(destination: Dashboard()) {

@@ -13,4 +13,5 @@ class Constants {
     // Minimum 8 characters at least 1 Alphabet and 1 Number:
     static let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$")
     static let maxLength = 64
+    static let randomeImgUrl = "https://picsum.photos/200"
 }

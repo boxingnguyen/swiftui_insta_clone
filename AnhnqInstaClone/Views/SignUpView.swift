@@ -14,7 +14,7 @@ struct SignUpView: View {
 
     var body: some View {
         NavigationView {
-            GradientBackground()
+            GradientBackgroundView()
                 .overlay(
                     _body
                 )
@@ -27,10 +27,10 @@ struct SignUpView: View {
                 profileView
 
                 Group {
-                    CommonTextField(value: $viewModel.email, hint: "Email", errMsg: viewModel.emailMsgErr)
-                    CommonTextField(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr)
-                    CommonTextField(value: $viewModel.fullname, hint: "Fullname")
-                    CommonTextField(value: $viewModel.username, hint: "Username")
+                    CommonTextFieldView(value: $viewModel.email, hint: "Email", errMsg: viewModel.emailMsgErr)
+                    CommonTextFieldView(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr)
+                    CommonTextFieldView(value: $viewModel.fullname, hint: "Fullname")
+                    CommonTextFieldView(value: $viewModel.username, hint: "Username")
                 }.padding(.top)
 
                 Button("Sign Up") {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommonTextField: View {
+struct CommonTextFieldView: View {
     @Binding var value: String
     var hint: String = ""
     var errMsg: String = ""
@@ -32,8 +32,8 @@ struct CommonTextField: View {
     }
 }
 
-struct CommonTextField_Previews: PreviewProvider {
+struct CommonTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        CommonTextField(value: .constant(""), hint: "abc").background(.blue)
+        CommonTextFieldView(value: .constant(""), hint: "abc").background(.blue)
     }
 }
