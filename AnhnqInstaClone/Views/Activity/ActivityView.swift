@@ -9,15 +9,24 @@ import SwiftUI
 
 struct ActivityView: View {
     @StateObject private var viewModel = ActivityViewModel()
+    private let navBarTitle = "Activity"
 
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(0 ..< 20) { _ in
-                    ActivityItem()
+        NavigationView {
+            ScrollView {
+                VStack {
+                    ForEach(0 ..< 20) { _ in
+                        ActivityItem()
+                    }
+                }
+                .padding()
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text(navBarTitle).font(.headline)
                 }
             }
-            .padding()
         }
     }
 }
@@ -25,5 +34,6 @@ struct ActivityView: View {
 struct ActivityView_Previews: PreviewProvider {
     static var previews: some View {
         ActivityView()
+            .preferredColorScheme(.dark)
     }
 }

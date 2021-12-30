@@ -15,11 +15,11 @@ struct ReelsPlayer: View {
     @State var isMuted = false
     @State var volumeAnimation = false
 
-    let randomUsername = randomName.randomElement()!
-    let randomLike = Int.random(in: 1 ..< 1000)
-    let randomComment = Int.random(in: 1 ..< 1000)
-    let randomShare = Int.random(in: 1 ..< 100)
-    let randomPeople = Int.random(in: 1 ..< 100)
+    private let randomUsername = randomName.randomElement()!
+    private let randomLike = Int.random(in: 1 ..< 1000)
+    private let randomComment = Int.random(in: 1 ..< 1000)
+    private let randomShare = Int.random(in: 1 ..< 100)
+    private let randomPeople = Int.random(in: 1 ..< 100)
 
     var body: some View {
         ZStack {
@@ -51,6 +51,7 @@ struct ReelsPlayer: View {
                             return
                         }
                         isMuted.toggle()
+
                         // Muting player
                         player.isMuted = isMuted
 
@@ -80,11 +81,9 @@ struct ReelsPlayer: View {
                             ownerInfoView
                             titleView
                         }
-
                         Spacer(minLength: 20)
                         actionButtons
                     }
-
                     musicView
                 }
                 .padding()
@@ -126,8 +125,7 @@ struct ReelsPlayer: View {
                     .padding(5)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(.white,
-                                    lineWidth: 1)
+                            .stroke(.white, lineWidth: 1)
                     )
             }
         }

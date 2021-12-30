@@ -8,106 +8,153 @@
 import SwiftUI
 
 struct ProfileView: View {
-    private let plusIcon = "plus.app"
+    private let plusAppIcon = "plus.app"
     private let menuIcon = "list.bullet"
     private let gridIcon = "square.grid.3x3.square"
-    private let filmIcon = "film"
-    private let profileIcon = "person.crop.circle"
-    private let username = "Boxing Nguyen"
+    private let playIcon = "play"
+    private let downIcon = "chevron.down"
+    private let profileIcon = "person.crop.square"
+    private let plusAvatarIcon = "plus.circle.fill"
+    private let randomPost = Int.random(in: 1 ..< 1000)
+    private let randomFollowers = Int.random(in: 1 ..< 1000)
+    private let randomFollowing = Int.random(in: 1 ..< 1000)
+
+    private let username = "boxingnguyen"
     private let fullname = "Nguyễn Quyền Anh"
+    private let bioWidth = UIScreen.main.bounds.width / 1.5
+    private let sampleBio = "Master yourself - Master the enemy! \nLike Swiming, Guitar, Football and Trekking"
 
     @StateObject private var viewModel = ProfileViewModel()
 
     var body: some View {
-        VStack {
-            HStack(spacing: 16) {
-                Text(username)
-                    .font(.headline)
-                Spacer()
-                Image(systemName: plusIcon)
-                Image(systemName: menuIcon)
-            }
-            .padding(.horizontal, 16)
-
+        NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
                     Group {
                         ZStack {
                             HStack {
-                                Image(ImgAssets.avatar)
-                                    .resizable()
-                                    .clipShape(Circle())
-                                    .aspectRatio(contentMode: .fit)
-                                    .scaleEffect(0.9)
-                                Spacer()
-                                TextColumn(title: "Post", number: 100)
-                                TextColumn(title: "Followers", number: 50)
-                                TextColumn(title: "Following", number: 1000)
-                            }
-//                            .frame(height: 200)
-                            .shadow(radius: 7)
-
-                            Image(systemName: "plus.circle.fill")
-                                .background(.white)
-                                .foregroundColor(.blue)
-                                .font(.system(size: 30))
-                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                                .onTapGesture {
-                                    // TODO: update avatar profile
-                                    viewModel.showingActionSheet = true
+                                ZStack {
+                                    // TODO: investigate frame of avatar can not fit to content
+                                    Image(ImgAssets.avatar)
+                                        .resizable()
+                                        .clipShape(Circle())
+                                        .scaledToFit()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: 200)
+                                        .scaleEffect(0.7)
+                                    updateAvatarIcon
                                 }
-                                .position(x: 100, y: 130)
-                        }.background(.gray)
+                                Spacer()
+                                TextColumn(title: "Post", number: randomPost)
+                                TextColumn(title: "Followers", number: randomFollowers)
+                                TextColumn(title: "Following", number: randomFollowing)
+                            }
+                            .padding(.trailing, 8)
+                        }
+                        .background(.gray.opacity(0.3))
 
                         Text(fullname)
                             .bold()
-                        Text("Master yourself - Master the enemy! \nLike Swiming, Guitar, Football and Trekking")
-                            .frame(width: UIScreen.main.bounds.width / 1.5, alignment: .leading)
-                        Spacer()
-
-                        HStack {
-                            Group {
-                                Button(action: {}) {
-                                    Text("Edit Profile")
-                                        .font(.body)
-                                        .padding()
-                                }
-
-                                Button(action: {}) {
-                                    Text("Saved")
-                                        .font(.body)
-                                        .padding()
-                                }
-                            }
-                            .border(.gray, width: 2)
-                            .cornerRadius(5)
-                            .padding(.horizontal, 10)
-                        }
+                        Text(sampleBio)
+                            .frame(width: bioWidth, alignment: .leading)
+                        groupButton
+                        storyHighlight
+                        Divider()
+                        groupIcon
                     }
-                    .padding(.horizontal, 8)
-
-                    HStack {
-                        Group {
-                            Button(action: {}) {
-                                Image(systemName: gridIcon)
-                                    .foregroundColor(.black)
-                            }
-                            Button(action: {}) {
-                                Image(systemName: filmIcon)
-                                    .foregroundColor(.black)
-                            }
-                            Button(action: {}) {
-                                Image(systemName: profileIcon)
-                                    .foregroundColor(.black)
-                            }
-                        }
-                    }
-                    .frame(width: .infinity, height: 50, alignment: .center)
-                    .background(.red)
+                    .padding(.horizontal, 10)
                     GridImagesView()
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .foregroundColor(.primary)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack {
+                        Text(username)
+                            .font(.title)
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack {
+                        Image(systemName: plusAppIcon)
+                        Image(ImgAssets.menu)
+                            .renderingMode(.template)
+                    }
+                }
+            }
         }
+    }
+
+    private var updateAvatarIcon: some View {
+        Image(systemName: plusAvatarIcon)
+            .background(.white)
+            .foregroundColor(.blue)
+            .font(.system(size: 30))
+            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .onTapGesture {
+                // TODO: update avatar profile
+                viewModel.showingActionSheet = true
+            }
+            .position(x: 110, y: 130)
+    }
+
+    private var groupButton: some View {
+        HStack {
+            Group {
+                Button(action: {}) {
+                    Text("Edit Profile")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(8)
+
+                Button(action: {}) {
+                    Image(systemName: downIcon)
+                        .padding(12.5)
+                }
+            }
+            .overlay(
+                RoundedRectangle(cornerRadius: 5)
+                    .stroke(.gray, lineWidth: 1)
+            )
+        }
+    }
+
+    private var storyHighlight: some View {
+        // TODO: change view as story row if user has story
+        HStack {
+            Group {
+                Text("Story highlights")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                Image(systemName: downIcon)
+                    .font(.system(size: 10))
+            }
+            .padding(.vertical, 8)
+        }
+    }
+
+    private var groupIcon: some View {
+        HStack {
+            Group {
+                Button(action: {}) {
+                    Image(systemName: gridIcon)
+                }
+                Button(action: {}) {
+                    Image(systemName: playIcon)
+                }
+                Button(action: {}) {
+                    Image(systemName: profileIcon)
+                }
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .font(.system(size: 30))
+        .padding(.vertical, 8)
     }
 }
 
@@ -120,12 +167,12 @@ private struct TextColumn: View {
             Text("\(number)")
             Text(title)
         }
-        .padding(.trailing, 10)
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .preferredColorScheme(.dark)
     }
 }

@@ -43,6 +43,7 @@ struct PostView: View {
         // TODO: display in case video or carousel
         AsyncImageView(url: Constants.randomeImgUrl)
             .frame(height: 300)
+            .aspectRatio(contentMode: .fill)
     }
     
     private var interactionView : some View {

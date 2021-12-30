@@ -4,6 +4,7 @@
 //
 //  Created by anhnq2 on 23/12/2021.
 //
+// Thank to Kavsoft from https://www.youtube.com/watch?v=Myl21dnEQ40
 
 import Alamofire
 import AVFoundation
@@ -68,6 +69,6 @@ struct ReelsView: View {
 
 struct ReelsView_Previews: PreviewProvider {
     static var previews: some View {
-        ReelsView()
+        DashboardView()
     }
 }

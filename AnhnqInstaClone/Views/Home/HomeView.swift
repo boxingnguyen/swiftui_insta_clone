@@ -19,12 +19,11 @@ struct HomeView: View {
                         Image(ImgAssets.instaLogo)
                             .resizable()
                             .renderingMode(.template)
-                            .foregroundColor(.black)
+                            .foregroundColor(.primary)
                     }.aspectRatio(contentMode: .fit)
                         .frame(width: 100, height: 50, alignment: .leading)
                     Spacer()
                     Image(systemName: plusIcon)
-                        .foregroundColor(.black)
                         .scaleEffect(1.5)
                     Spacer()
                         .frame(width: 20)
@@ -33,7 +32,7 @@ struct HomeView: View {
                         .scaleEffect(1.5)
                 }
                 .padding(.horizontal, 16)
-            }.background(.white)
+            }
 
             ScrollView {
                 StoryView()
@@ -49,5 +48,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .preferredColorScheme(.dark)
     }
 }

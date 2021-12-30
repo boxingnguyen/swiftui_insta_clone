@@ -32,7 +32,7 @@ struct StoryView: View {
                             .frame(width: 69, alignment: .center)
                             .lineLimit(1)
                             .font(.caption)
-                    }.background(.white)
+                    }
                 }
             }
             .padding(8)
