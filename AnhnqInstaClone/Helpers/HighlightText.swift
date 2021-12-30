@@ -81,6 +81,7 @@ extension StyledText: View {
 
     public func text() -> Text {
         var text = Text(verbatim: "")
+
         attributedString
             .enumerateAttributes(in: NSRange(location: 0, length: attributedString.length),
                                  options: []) { attributes, range, _ in
@@ -90,6 +91,7 @@ extension StyledText: View {
                     style.apply(segment)
                 }
             }
+
         return text
     }
 }

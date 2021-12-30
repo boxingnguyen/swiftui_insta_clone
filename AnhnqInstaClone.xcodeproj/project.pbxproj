@@ -22,11 +22,20 @@
 		180C4372277983BC009135C6 /* IOS-Instagram.postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 180C4371277983BC009135C6 /* IOS-Instagram.postman_collection.json */; };
 		180C4374277987E8009135C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C4373277987E8009135C6 /* UserModel.swift */; };
 		180C43762779ACEC009135C6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C43752779ACEC009135C6 /* AuthService.swift */; };
+		18194839277D7B5500B2DB6D /* ReelsPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18194838277D7B5500B2DB6D /* ReelsPlayer.swift */; };
 		1866345E2769CE8100C1B515 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1866345D2769CE8100C1B515 /* TestView.swift */; };
 		189901CF277C602D005B0FFB /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189901CE277C602D005B0FFB /* ActivityViewModel.swift */; };
 		189901D2277C619E005B0FFB /* ActivityItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189901D1277C619E005B0FFB /* ActivityItemView.swift */; };
 		189901D4277C61FB005B0FFB /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189901D3277C61FB005B0FFB /* Enums.swift */; };
 		189901D6277C64D0005B0FFB /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189901D5277C64D0005B0FFB /* ActivityModel.swift */; };
+		189901D8277CC566005B0FFB /* ReelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189901D7277CC565005B0FFB /* ReelModel.swift */; };
+		189901DB277CC6F9005B0FFB /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189901DA277CC6F9005B0FFB /* CustomVideoPlayer.swift */; };
+		189901E2277CCDFF005B0FFB /* Reel5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 189901DC277CCDF4005B0FFB /* Reel5.mp4 */; };
+		189901E3277CCDFF005B0FFB /* Reel6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 189901DD277CCDF5005B0FFB /* Reel6.mp4 */; };
+		189901E4277CCDFF005B0FFB /* Reel3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 189901DE277CCDF7005B0FFB /* Reel3.mp4 */; };
+		189901E6277CCDFF005B0FFB /* Reel4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 189901E0277CCDFE005B0FFB /* Reel4.mp4 */; };
+		189901E7277CCDFF005B0FFB /* Reel1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 189901E1277CCDFF005B0FFB /* Reel1.mp4 */; };
+		189901E9277CCEB9005B0FFB /* Reel2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 189901E8277CCEB8005B0FFB /* Reel2.mp4 */; };
 		18A2DE3F277C09B4004E047B /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2DE3E277C09B4004E047B /* AsyncImageLoader.swift */; };
 		18A2DE43277C15B2004E047B /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2DE42277C15B2004E047B /* AsyncImageView.swift */; };
 		18A2DE45277C5239004E047B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2DE44277C5239004E047B /* ProfileViewModel.swift */; };
@@ -89,11 +98,20 @@
 		180C4371277983BC009135C6 /* IOS-Instagram.postman_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "IOS-Instagram.postman_collection.json"; sourceTree = "<group>"; };
 		180C4373277987E8009135C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		180C43752779ACEC009135C6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		18194838277D7B5500B2DB6D /* ReelsPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsPlayer.swift; sourceTree = "<group>"; };
 		1866345D2769CE8100C1B515 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		189901CE277C602D005B0FFB /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		189901D1277C619E005B0FFB /* ActivityItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityItemView.swift; sourceTree = "<group>"; };
 		189901D3277C61FB005B0FFB /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		189901D5277C64D0005B0FFB /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		189901D7277CC565005B0FFB /* ReelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelModel.swift; sourceTree = "<group>"; };
+		189901DA277CC6F9005B0FFB /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		189901DC277CCDF4005B0FFB /* Reel5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel5.mp4; sourceTree = "<group>"; };
+		189901DD277CCDF5005B0FFB /* Reel6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel6.mp4; sourceTree = "<group>"; };
+		189901DE277CCDF7005B0FFB /* Reel3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel3.mp4; sourceTree = "<group>"; };
+		189901E0277CCDFE005B0FFB /* Reel4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel4.mp4; sourceTree = "<group>"; };
+		189901E1277CCDFF005B0FFB /* Reel1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel1.mp4; sourceTree = "<group>"; };
+		189901E8277CCEB8005B0FFB /* Reel2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel2.mp4; sourceTree = "<group>"; };
 		18A2DE3E277C09B4004E047B /* AsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
 		18A2DE42277C15B2004E047B /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		18A2DE44277C5239004E047B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +166,12 @@
 		18047D1827609E21007254B6 = {
 			isa = PBXGroup;
 			children = (
+				189901E1277CCDFF005B0FFB /* Reel1.mp4 */,
+				189901E8277CCEB8005B0FFB /* Reel2.mp4 */,
+				189901DE277CCDF7005B0FFB /* Reel3.mp4 */,
+				189901E0277CCDFE005B0FFB /* Reel4.mp4 */,
+				189901DC277CCDF4005B0FFB /* Reel5.mp4 */,
+				189901DD277CCDF5005B0FFB /* Reel6.mp4 */,
 				18047D2327609E21007254B6 /* AnhnqInstaClone */,
 				18047D3427609E24007254B6 /* AnhnqInstaCloneTests */,
 				18047D3E27609E24007254B6 /* AnhnqInstaCloneUITests */,
@@ -226,13 +250,13 @@
 		18047D552760A9DD007254B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				18BD313D277B9B2600943E4A /* Search */,
 				18BD3132277AC8D900943E4A /* Home */,
+				18BD313D277B9B2600943E4A /* Search */,
+				189901D9277CC6C1005B0FFB /* Reels */,
 				189901D0277C617E005B0FFB /* Activity */,
 				18047D582760AA10007254B6 /* SignUpView.swift */,
 				18047D5C2760B035007254B6 /* SignInView.swift */,
 				1866345D2769CE8100C1B515 /* TestView.swift */,
-				18B0D0352774265E006E4122 /* ReelsView.swift */,
 				18B0D0392774267A006E4122 /* ProfileView.swift */,
 				18B0D03B277426B2006E4122 /* DashboardView.swift */,
 			);
@@ -254,6 +278,16 @@
 				189901D1277C619E005B0FFB /* ActivityItemView.swift */,
 			);
 			path = Activity;
+			sourceTree = "<group>";
+		};
+		189901D9277CC6C1005B0FFB /* Reels */ = {
+			isa = PBXGroup;
+			children = (
+				18B0D0352774265E006E4122 /* ReelsView.swift */,
+				189901DA277CC6F9005B0FFB /* CustomVideoPlayer.swift */,
+				18194838277D7B5500B2DB6D /* ReelsPlayer.swift */,
+			);
+			path = Reels;
 			sourceTree = "<group>";
 		};
 		18B3D00C2770444B00DB5BB6 /* Services */ = {
@@ -313,6 +347,7 @@
 				180C4373277987E8009135C6 /* UserModel.swift */,
 				18BD3137277AEAA300943E4A /* PostModel.swift */,
 				189901D5277C64D0005B0FFB /* ActivityModel.swift */,
+				189901D7277CC565005B0FFB /* ReelModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -427,6 +462,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189901E9277CCEB9005B0FFB /* Reel2.mp4 in Resources */,
+				189901E2277CCDFF005B0FFB /* Reel5.mp4 in Resources */,
+				189901E3277CCDFF005B0FFB /* Reel6.mp4 in Resources */,
+				189901E4277CCDFF005B0FFB /* Reel3.mp4 in Resources */,
+				189901E6277CCDFF005B0FFB /* Reel4.mp4 in Resources */,
+				189901E7277CCDFF005B0FFB /* Reel1.mp4 in Resources */,
 				180C4372277983BC009135C6 /* IOS-Instagram.postman_collection.json in Resources */,
 				18047D2C27609E23007254B6 /* Preview Assets.xcassets in Resources */,
 				18047D2927609E23007254B6 /* Assets.xcassets in Resources */,
@@ -458,6 +499,7 @@
 				18FA8D7A27673E5D00C20F91 /* ImgAssets.swift in Sources */,
 				18B3D00E2770449A00DB5BB6 /* SignInHandler.swift in Sources */,
 				18047D2727609E21007254B6 /* ContentView.swift in Sources */,
+				18194839277D7B5500B2DB6D /* ReelsPlayer.swift in Sources */,
 				18047D632760B6F9007254B6 /* CommonTextFieldView.swift in Sources */,
 				18BD313C277B91D300943E4A /* GridImagesView.swift in Sources */,
 				18B0D0322774263E006E4122 /* HomeView.swift in Sources */,
@@ -465,6 +507,7 @@
 				180C43762779ACEC009135C6 /* AuthService.swift in Sources */,
 				18FA8D702766FDC500C20F91 /* Extensions.swift in Sources */,
 				18B3D0152770711B00DB5BB6 /* WoofResponse.swift in Sources */,
+				189901D8277CC566005B0FFB /* ReelModel.swift in Sources */,
 				189901D6277C64D0005B0FFB /* ActivityModel.swift in Sources */,
 				18A2DE43277C15B2004E047B /* AsyncImageView.swift in Sources */,
 				189901D2277C619E005B0FFB /* ActivityItemView.swift in Sources */,
@@ -488,6 +531,7 @@
 				18B0D03A2774267A006E4122 /* ProfileView.swift in Sources */,
 				18A2DE3F277C09B4004E047B /* AsyncImageLoader.swift in Sources */,
 				18BD3136277AC95200943E4A /* PostView.swift in Sources */,
+				189901DB277CC6F9005B0FFB /* CustomVideoPlayer.swift in Sources */,
 				1866345E2769CE8100C1B515 /* TestView.swift in Sources */,
 				189901D4277C61FB005B0FFB /* Enums.swift in Sources */,
 				18BD313A277B7D8600943E4A /* HighlightText.swift in Sources */,

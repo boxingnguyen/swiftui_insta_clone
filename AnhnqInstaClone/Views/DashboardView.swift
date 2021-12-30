@@ -32,6 +32,7 @@ struct DashboardView: View {
                     }.navigationBarHidden(true)
                 }
                 .tabItem {
+                    // TODO: change reel icon when current tab is reel
                     selection == index ? Image(selectedImages[index]) : Image(unselectedImages[index])
                 }
             }
