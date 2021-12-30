@@ -101,6 +101,9 @@ struct ReelsPlayer: View {
                     .opacity(volumeAnimation ? 1 : 0)
             }
         }
+        .onDisappear {
+            reel.player?.pause()
+        }
     }
 
     private var ownerInfoView: some View {
