@@ -31,28 +31,7 @@ struct ProfileView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     Group {
-                        ZStack {
-                            HStack {
-                                ZStack {
-                                    // TODO: investigate frame of avatar can not fit to content
-                                    Image(ImgAssets.avatar)
-                                        .resizable()
-                                        .clipShape(Circle())
-                                        .scaledToFit()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(height: 200)
-                                        .scaleEffect(0.7)
-                                    updateAvatarIcon
-                                }
-                                Spacer()
-                                TextColumn(title: "Post", number: randomPost)
-                                TextColumn(title: "Followers", number: randomFollowers)
-                                TextColumn(title: "Following", number: randomFollowing)
-                            }
-                            .padding(.trailing, 8)
-                        }
-                        .background(.gray.opacity(0.3))
-
+                        profileInfo
                         Text(fullname)
                             .bold()
                         Text(sampleBio)
@@ -84,6 +63,31 @@ struct ProfileView: View {
                 }
             }
         }
+        .navigationBarHidden(true)
+    }
+
+    private var profileInfo: some View {
+        ZStack {
+            HStack {
+                ZStack {
+                    // TODO: investigate frame of avatar can not fit to content
+                    Image(ImgAssets.avatar)
+                        .resizable()
+                        .clipShape(Circle())
+                        .scaledToFit()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 200)
+                        .scaleEffect(0.7)
+                    updateAvatarIcon
+                }
+                Spacer()
+                TextColumn(title: "Post", number: randomPost)
+                TextColumn(title: "Followers", number: randomFollowers)
+                TextColumn(title: "Following", number: randomFollowing)
+            }
+            .padding(.trailing, 8)
+        }
+        .background(.gray.opacity(0.3))
     }
 
     private var updateAvatarIcon: some View {
