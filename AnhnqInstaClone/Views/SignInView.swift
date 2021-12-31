@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     @StateObject private var viewModel = SignInViewModel()
+    @State var activateNavigationLink = false
 
     var body: some View {
         NavigationView {
@@ -16,7 +17,9 @@ struct SignInView: View {
                 .overlay(
                     _body
                 )
+                .navigationBarHidden(true)
         }
+        .navigationBarHidden(true)
     }
 
     var _body: some View {
@@ -30,7 +33,7 @@ struct SignInView: View {
                 CommonTextFieldView(value: $viewModel.password, hint: "Password", errMsg: viewModel.passwordMsgErr, isSecure: true)
             }.padding(.top)
 
-            NavigationLink(destination: DashboardView()) {
+            NavigationLink(destination: DashboardView(), isActive: $viewModel.canSubmit) {
                 Button("Log In") {
                     // login and go to home
                     viewModel.signIn()
@@ -38,33 +41,45 @@ struct SignInView: View {
                     .buttonStyle(BottomButtonStyle())
                     .disabled(!viewModel.canSubmit)
                     .opacity(viewModel.canSubmit ? 1 : 0.6)
+                    .navigationBarHidden(true)
             }
+            .navigationBarHidden(true)
+
             Spacer()
                 .frame(height: 20)
-            HStack {
-                Text("Forgot your password?")
-                    .foregroundColor(.white)
-                    .font(.body)
-                Button(action: {
-                    // goto forgot password
-                }) {
-                    Text("Get help signing in.")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                }
-            }
+            forgotPass
             Spacer()
-            HStack {
-                Text("Don't have an account?")
-                    .foregroundColor(.white)
-                    .font(.body)
-                NavigationLink(destination: SignUpView()) {
-                    Text("Sign Up")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                }
-            }
+            signUp
         }.padding()
+            .navigationBarHidden(true)
+    }
+
+    private var forgotPass: some View {
+        HStack {
+            Text("Forgot your password?")
+                .foregroundColor(.white)
+                .font(.body)
+            Button(action: {
+                // goto forgot password
+            }) {
+                Text("Get help signing in.")
+                    .foregroundColor(.white)
+                    .font(.headline)
+            }
+        }
+    }
+
+    private var signUp: some View {
+        HStack {
+            Text("Don't have an account?")
+                .foregroundColor(.white)
+                .font(.body)
+            NavigationLink(destination: SignUpView()) {
+                Text("Sign Up")
+                    .font(.headline)
+                    .foregroundColor(.white)
+            }
+        }
     }
 }
 

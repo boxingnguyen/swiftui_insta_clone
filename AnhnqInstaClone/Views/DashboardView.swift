@@ -15,39 +15,43 @@ struct DashboardView: View {
     let unselectedImages = [ImgAssets.homeUnselect, ImgAssets.searchUnselect, ImgAssets.reelsUnselected, ImgAssets.likeUnselect, ImgAssets.profileUnselect]
 
     var body: some View {
-        TabView(selection: $selection) {
-            ForEach(0 ..< 5) { index in
-                NavigationView {
-                    Group {
-                        switch index {
-                        case 1:
-                            SearchView()
-                        case 2:
-                            ReelsView()
-                        case 3:
-                            ActivityView()
-                        case 4:
-                            ProfileView()
-                        default:
-                            HomeView()
+        NavigationView {
+            TabView(selection: $selection) {
+                ForEach(0 ..< 5) { index in
+                    NavigationView {
+                        Group {
+                            switch index {
+                            case 1:
+                                SearchView()
+                            case 2:
+                                ReelsView()
+                            case 3:
+                                ActivityView()
+                            case 4:
+                                ProfileView()
+                            default:
+                                HomeView()
+                            }
                         }
-                    }.navigationBarHidden(true)
-                }
-                .tabItem {
-                    // TODO: change profile icon to avatar
-                    if selection == index {
-                        Image(selectedImages[index])
-                            .renderingMode(.template)
-                    } else {
-                        Image(unselectedImages[index])
-                            .renderingMode(colorScheme == .dark || selection == 2 ? .template : .none)
+                        .navigationBarHidden(true)
+                    }
+                    .navigationBarHidden(true)
+                    .tabItem {
+                        // TODO: change profile icon to avatar
+                        if selection == index {
+                            Image(selectedImages[index])
+                                .renderingMode(.template)
+                        } else {
+                            Image(unselectedImages[index])
+                                .renderingMode(colorScheme == .dark || selection == 2 ? .template : .none)
+                        }
                     }
                 }
             }
+            .accentColor(.primary)
+            .preferredColorScheme(selection == 2 ? .dark : .none)
         }
         .navigationBarHidden(true)
-        .accentColor(.primary)
-        .preferredColorScheme(selection == 2 ? .dark : .none)
     }
 }
 
