@@ -16,6 +16,7 @@ struct AsyncImageView: View {
                 image.resizable()
             } placeholder: {
                 ProgressView()
+                    .frame(width: 50, height: 50)
             }
         } else {
             if let validUrl = URL(string: url) {

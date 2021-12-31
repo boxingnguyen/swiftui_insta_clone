@@ -45,7 +45,7 @@ struct ReelsPlayer: View {
                 }
                 // Volume control
                 Color.black.opacity(0.01)
-                    .frame(width: .infinity, height: .infinity)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .onTapGesture {
                         if volumeAnimation {
                             return

@@ -15,55 +15,55 @@ struct SearchView: View {
     var body: some View {
         VStack {
             HStack {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-
-                    TextField("search", text: $searchText, onEditingChanged: { _ in
-                        self.showCancelButton = true
-                    }, onCommit: {
-                        print("onCommit")
-                    }).foregroundColor(.primary)
-
-                    Button(action: {
-                        self.searchText = ""
-                    }) {
-                        Image(systemName: "xmark.circle.fill").opacity(searchText == "" ? 0 : 1)
-                    }
-                }
-                .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
-                .foregroundColor(.secondary)
-                .background(.gray.opacity(0.3))
-                .cornerRadius(10.0)
+                searchIconAndPlaceholder
+                    .background(.gray.opacity(0.3))
+                    .cornerRadius(10.0)
 
                 if showCancelButton {
-                    Button("Cancel") {
-                        UIApplication.shared.endEditing(true) // this must be placed before the other commands here
-                        self.searchText = ""
-                        self.showCancelButton = false
-                    }
-                    .foregroundColor(Color(.systemBlue))
+                    cancelButton
                 }
             }
-            .padding(.horizontal)
-            .navigationBarHidden(showCancelButton) // .animation(.default) // animation does not work properly
+            .padding(.horizontal, 8)
 
             GridImagesView()
-//            List {
-//                // Filtered list of names
-//                ForEach(array.filter { $0.hasPrefix(searchText) || searchText == "" }, id: \.self) {
-//                    searchText in Text(searchText)
-//                }
-//            }
-
-//            .resignKeyboardOnDragGesture()
+                .padding(.top, 8)
         }
+    }
+
+    private var searchIconAndPlaceholder: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+            TextField("search", text: $searchText, onEditingChanged: { _ in
+                self.showCancelButton = true
+            }, onCommit: {
+                print("onCommit")
+            })
+            .frame(maxWidth: .infinity)
+
+            Button(action: {
+                self.searchText = ""
+            }) {
+                Image(systemName: "xmark.circle.fill").opacity(searchText == "" ? 0 : 1)
+            }
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 6)
+    }
+
+    private var cancelButton: some View {
+        Button("Cancel") {
+            UIApplication.shared.endEditing(true) // this must be placed before the other commands here
+            self.searchText = ""
+            self.showCancelButton = false
+        }
+        .foregroundColor(.primary)
     }
 }
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SearchView()
+            SignInView()
                 .environment(\.colorScheme, .light)
 //
 //            SearchView()

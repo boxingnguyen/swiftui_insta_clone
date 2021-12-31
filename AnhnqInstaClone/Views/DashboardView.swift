@@ -33,8 +33,10 @@ struct DashboardView: View {
                                 HomeView()
                             }
                         }
+                        .navigationBarTitle("")
                         .navigationBarHidden(true)
                     }
+                    .navigationBarTitle("")
                     .navigationBarHidden(true)
                     .tabItem {
                         // TODO: change profile icon to avatar
@@ -52,6 +54,7 @@ struct DashboardView: View {
             .preferredColorScheme(selection == 2 ? .dark : .none)
         }
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

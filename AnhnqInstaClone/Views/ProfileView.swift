@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ProfileView: View {
     private let plusAppIcon = "plus.app"
-    private let menuIcon = "list.bullet"
     private let gridIcon = "square.grid.3x3.square"
     private let playIcon = "play"
     private let downIcon = "chevron.down"
@@ -32,6 +31,7 @@ struct ProfileView: View {
                 VStack(alignment: .leading) {
                     Group {
                         profileInfo
+
                         Text(fullname)
                             .bold()
                         Text(sampleBio)
@@ -63,31 +63,25 @@ struct ProfileView: View {
                 }
             }
         }
-        .navigationBarHidden(true)
     }
 
     private var profileInfo: some View {
-        ZStack {
-            HStack {
-                ZStack {
-                    // TODO: investigate frame of avatar can not fit to content
-                    Image(ImgAssets.avatar)
-                        .resizable()
-                        .clipShape(Circle())
-                        .scaledToFit()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 200)
-                        .scaleEffect(0.7)
-                    updateAvatarIcon
-                }
-                Spacer()
-                TextColumn(title: "Post", number: randomPost)
-                TextColumn(title: "Followers", number: randomFollowers)
-                TextColumn(title: "Following", number: randomFollowing)
+        HStack {
+            ZStack {
+                // TODO: investigate frame of avatar can not fit to content
+                Image(ImgAssets.avatar)
+                    .resizable()
+                    .frame(width: 120, height: 120)
+                    .clipShape(Circle())
+                updateAvatarIcon
+                    .frame(width: 120, height: 120, alignment: .bottomTrailing)
             }
-            .padding(.trailing, 8)
+            Spacer()
+            TextColumn(title: "Post", number: randomPost)
+            TextColumn(title: "Followers", number: randomFollowers)
+            TextColumn(title: "Following", number: randomFollowing)
         }
-        .background(.gray.opacity(0.3))
+        .padding(.trailing, 8)
     }
 
     private var updateAvatarIcon: some View {
@@ -100,7 +94,6 @@ struct ProfileView: View {
                 // TODO: update avatar profile
                 viewModel.showingActionSheet = true
             }
-            .position(x: 110, y: 130)
     }
 
     private var groupButton: some View {
