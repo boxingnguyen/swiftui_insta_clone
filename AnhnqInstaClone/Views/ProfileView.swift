@@ -31,7 +31,6 @@ struct ProfileView: View {
                 VStack(alignment: .leading) {
                     Group {
                         profileInfo
-
                         Text(fullname)
                             .bold()
                         Text(sampleBio)
@@ -68,9 +67,9 @@ struct ProfileView: View {
     private var profileInfo: some View {
         HStack {
             ZStack {
-                // TODO: investigate frame of avatar can not fit to content
                 Image(ImgAssets.avatar)
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 120, height: 120)
                     .clipShape(Circle())
                 updateAvatarIcon
